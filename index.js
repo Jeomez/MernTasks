@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 
 //puerto de la app
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json({extended: true}));
 
@@ -27,6 +27,6 @@ app.use('/api/tareas', require('./routes/tareas'));
 
 
 //arrancar la app o el servidor
-app.listen(PORT, () => {
+app.listen(port, '0.0.0.0',  () => {
     console.log(`El servidor esta corriendo por el puerto ${PORT}`);
 });
