@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 
 //puerto de la app
-const port = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 app.use(express.json({extended: true}));
 
